@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+
+  backend:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+    # environment: # change to env
+    #   DATABASE_HOST: database
+    #   POSTGRES_USER: postgres
+    #   POSTGRES_PASSWORD: jasont
+    #   POSTGRES_DB: rails_app_development
+    env_file:
+      - .env/database
+      - .env/backend
+    
+    # Change to env
+  database:
+    image: postgres
+    restart: always
+    # environment:
+    #   POSTGRES_USER: postgres
+    #   POSTGRES_PASSWORD: jasont
+    #   POSTGRES_DB: rails_app_development
+    env_file:
+      - .env/database
+    volumes:
+      - db_data:/var/lib/postgresql/database
+
+volumes:
+  db_data:
