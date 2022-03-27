@@ -9,10 +9,7 @@ services:
     volumes:
       - .:/usr/src/app
     # environment: # change to env
-    #   DATABASE_HOST: database
-    #   POSTGRES_USER: postgres
-    #   POSTGRES_PASSWORD: jasont
-    #   POSTGRES_DB: rails_app_development
+   
     env_file:
       - .env/database
       - .env/backend
@@ -21,10 +18,7 @@ services:
   database:
     image: postgres
     restart: always
-    # environment:
-    #   POSTGRES_USER: postgres
-    #   POSTGRES_PASSWORD: jasont
-    #   POSTGRES_DB: rails_app_development
+   
     env_file:
       - .env/database
     volumes:
