@@ -16,7 +16,7 @@ services:
     
     # Change to env
   database:
-    image: postgres
+    image: postgres:14.1-alpine
     restart: always
    
     env_file:
@@ -26,3 +26,4 @@ services:
 
 volumes:
   db_data:
+    driver: local
