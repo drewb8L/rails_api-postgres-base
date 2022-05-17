@@ -1,24 +1,27 @@
 # README
+### This is a base Rails api project using Postgres as a database.
+Clone, cd into directory. Create a new directory called ".env", make sure you are in the "rails_api-postgres-base" folder.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Inside the .env folder create two files, backend and database.
 
-Things you may want to cover:
+Copy and paste this into the respective files to get started.
 
-* Ruby version
+In backend copy this:
 
-* System dependencies
+>DATABASE=postgres
 
-* Configuration
 
-* Database creation
+In database copy this:
 
-* Database initialization
+>POSTGRES_USER=postgres\
+POSTGRES_PASSWORD=my_secure_password\
+> Replace above with a good password!
 
-* How to run the test suite
+Save the files and run:
 
-* Services (job queues, cache servers, search engines, etc.)
+>rails db:create
 
-* Deployment instructions
+Run:
+>docker-compose up --build
 
-* ...
+Navigate to localhost:3000 And you should see the Rails logo
