@@ -17,11 +17,8 @@ In database copy this:
 POSTGRES_PASSWORD=my_secure_password\
 > Replace above with a good password!
 
-Save the files and run:
-
->rails db:create
-
 Run:
 >docker-compose up --build
+
 
 Navigate to localhost:3000 And you should see the Rails logo
